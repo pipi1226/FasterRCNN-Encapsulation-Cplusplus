@@ -1,5 +1,10 @@
 #ifndef FASTER_RCNN_HPP
 #define FASTER_RCNN_HPP
+
+// [2019-09-10] Add by pipi1226, use cpu mode
+// gpu mode annotate the sentence below
+#define CPU_ONLY 1
+
 #include <stdio.h>  // for snprintf
 #include <string>
 #include <vector>
@@ -63,7 +68,10 @@ int EV2641_ReleaseCarDetector();
 int EV2641_A_GetCarRect(const EV2641Image * image, int &max_ret_num, EV2641Rect * rect, Detector * &handle);
 
 //background and car
-const int class_num=2;
+//const int class_num=2;
+
+// [2016-08-23] Modified by pipi1226
+const int class_num=21;
 
 /*
  * ===  Class  ======================================================================

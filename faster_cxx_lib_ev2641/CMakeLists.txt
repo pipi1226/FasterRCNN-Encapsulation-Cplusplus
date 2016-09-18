@@ -6,27 +6,23 @@ project (main_demo)
 
 add_executable(main main.cpp)
 
-include_directories ( "${PROJECT_SOURCE_DIR}/../caffe-fast-rcnn/include"
-    "${PROJECT_SOURCE_DIR}/../lib/nms" 
-    "${PROJECT_SOURCE_DIR}/lib" 
-    /share/apps/local/include
-    /usr/local/include 
-    /opt/python/include/python2.7
-    /share/apps/opt/intel/mkl/include 
-    /usr/local/cuda/include )
+include_directories ( /usr/caffe/py-faster-rcnn-master/caffe-fast-rcnn/include
+    /usr/caffe/py-faster-rcnn-master/lib/nms
+    /usr/local/include
+    /usr/include/python2.7
+    /usr/include/atlas 
+    )
 
-target_link_libraries(main /home/lyh1/workspace/py-faster-rcnn/faster_cxx_lib_ev2641/lib/libfaster_rcnn.so
-    /home/lyh1/workspace/py-faster-rcnn/caffe-fast-rcnn/build/lib/libcaffe.so
-    /home/lyh1/workspace/py-faster-rcnn/lib/nms/gpu_nms.so 
-    /share/apps/local/lib/libopencv_highgui.so 
-    /share/apps/local/lib/libopencv_core.so 
-    /share/apps/local/lib/libopencv_imgproc.so 
-    /share/apps/local/lib/libopencv_imgcodecs.so
-    /share/apps/local/lib/libglog.so
-    /share/apps/local/lib/libboost_system.so
-    /share/apps/local/lib/libboost_python.so
-    /share/apps/local/lib/libglog.so
-    /opt/rh/python27/root/usr/lib64/libpython2.7.so
+target_link_libraries(main /home/louxiu/caffe_Pro/caffe-gcc/faster_cxx_lib_ev2641/lib/libfaster_rcnn.so
+    /usr/caffe/py-faster-rcnn-master/caffe-fast-rcnn/build/lib/libcaffe.so
+    /usr/local/lib/libopencv_highgui.so 
+    /usr/local/lib/libopencv_core.so 
+    /usr/local/lib/libopencv_imgproc.so 
+    /usr/local/lib/libopencv_imgcodecs.so
+    /usr/lib/x86_64-linux-gnu/libglog.so
+    /usr/lib/x86_64-linux-gnu/libboost_system.so
+    /usr/lib/x86_64-linux-gnu/libboost_python.so
+    /usr/lib/x86_64-linux-gnu/libpython2.7.so
     )
 
 
